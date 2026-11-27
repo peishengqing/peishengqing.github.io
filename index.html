@@ -14,7 +14,7 @@
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 680px; margin: 0 auto; padding: 0 24px 64px; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px 64px; }
 
   /* hero */
   header { position: relative; padding: 72px 0 40px; }
@@ -31,7 +31,9 @@
   .rule span { font-size: 12px; color: #a39a86; letter-spacing: 2px; }
 
   /* cards */
-  .cards { margin-top: 8px; display: flex; flex-direction: column; gap: 14px; }
+  .cards { margin-top: 8px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .card-static:hover { border-color: #e7ddc6; transform: none; }
+  .card-wide { grid-column: span 2; }
   .card {
     display: flex; align-items: center; gap: 16px;
     background: #fffdf7;
@@ -60,7 +62,7 @@
   /* gallery */
   .gallery { margin-top: 40px; }
   .gallery h3 { font-size: 13px; letter-spacing: 3px; color: #a39a86; font-weight: 600; }
-  .gallery .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 12px; }
+  .gallery .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 12px; }
   .gallery a { display: block; text-decoration: none; color: inherit; }
   .gallery img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 12px; border: 1px solid #e7ddc6; display: block; }
   .gallery span { display: block; margin-top: 7px; font-size: 13px; color: #7a7264; text-align: center; }
@@ -79,6 +81,11 @@
 
   footer { margin-top: 48px; text-align: center; font-size: 13px; color: #a39a86; letter-spacing: 1px; }
   footer .dot { margin: 0 8px; color: #d8cfb8; }
+
+  @media (max-width: 640px) {
+    .cards { display: flex; flex-direction: column; }
+    .gallery .grid { grid-template-columns: 1fr 1fr; }
+  }
 
   @media (max-width: 480px) {
     header { padding-top: 56px; }
@@ -110,8 +117,8 @@
       <a class="card" href="/weekend/">
         <div class="icon">乐</div>
         <div class="body">
-          <h2>本周末活动<span class="tag">11月21–22日</span></h2>
-          <p>汉诺之夜演唱会 + 抚仙湖两日游，行程都排好了</p>
+          <h2>本周末活动<span class="tag">11月28–29日</span></h2>
+          <p>张韶涵昆明站 + 抚仙湖两日游，行程都排好了</p>
         </div>
         <div class="arrow">›</div>
       </a>
@@ -123,6 +130,21 @@
         </div>
         <div class="arrow">›</div>
       </a>
+      <a class="card" href="https://www.youtube.com/@千年等待-t8u" target="_blank" rel="noopener">
+        <div class="icon">播</div>
+        <div class="body">
+          <h2>YouTube · 千年等待</h2>
+          <p>竖屏读书短视频，《活着》等</p>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+      <div class="card card-static card-wide">
+        <div class="icon">贴</div>
+        <div class="body">
+          <h2>微信公众号 · I丶Love丶you</h2>
+          <p>情感贴图</p>
+        </div>
+      </div>
     </div>
 
 
@@ -141,6 +163,14 @@
       <a href="https://www.xiaohongshu.com/explore/6aff60ff000000001802e678" target="_blank" rel="noopener">
         <div class="title">玉溪周末攻略！演唱会+抚仙湖</div>
         <div class="meta">2026-11-20 · 小红书 千年等待</div>
+      </a>
+      <a href="https://www.xiaohongshu.com/explore/6aff6c77000000002b0042b7" target="_blank" rel="noopener">
+        <div class="title">玉溪周末值得去的6个地方详解</div>
+        <div class="meta">2026-11-20 · 小红书 千年等待</div>
+      </a>
+      <a href="https://www.xiaohongshu.com/explore/6afefbd7000000002b03110d" target="_blank" rel="noopener">
+        <div class="title">糖尿病人得了流感怎么办！</div>
+        <div class="meta">2026-11-19 · 小红书 千年等待</div>
       </a>
     </section>
 
